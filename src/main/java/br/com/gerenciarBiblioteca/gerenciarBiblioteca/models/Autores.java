@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Table( name = "autor")
-public class Autor implements Serializable{
+public class Autores implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -14,9 +14,9 @@ public class Autor implements Serializable{
 	private Integer idAutor;
 	private String nomeAutor;
 	
-	public Autor() {}
+	public Autores() {}
 
-	public Autor(Integer idAutor, String nomeAutor) {
+	public Autores(Integer idAutor, String nomeAutor) {
 		super();
 		this.idAutor = idAutor;
 		this.nomeAutor = nomeAutor;
