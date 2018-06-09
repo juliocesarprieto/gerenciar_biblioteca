@@ -1,15 +1,11 @@
 package br.com.gerenciarBiblioteca.gerenciarBiblioteca.repositories;
 
-import java.util.List;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import br.com.gerenciarBiblioteca.gerenciarBiblioteca.models.Autores;
+import br.com.gerenciarBiblioteca.gerenciarBiblioteca.models.Libros;
 
 @Repository
-public interface AutorRepository extends JpaRepository<Autores, Integer>{
+public interface LibrosRepository extends JpaRepository<Libros, Integer>{
 	
-	List<Autores> findAll();
-
+	
 }

@@ -1,30 +1,26 @@
 package br.com.gerenciarBiblioteca.gerenciarBiblioteca.services;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import br.com.gerenciarBiblioteca.gerenciarBiblioteca.models.Autores;
-import br.com.gerenciarBiblioteca.gerenciarBiblioteca.repositories.AutoresRepository;
+import br.com.gerenciarBiblioteca.gerenciarBiblioteca.models.Comentarios;
+import br.com.gerenciarBiblioteca.gerenciarBiblioteca.repositories.ComentariosRepository;
 
 @RestController
-@RequestMapping("/api/autores")
-public class AutoresService {
-
+@RequestMapping("/api/comentarios")
+public class ComentariosService {
+	
 	@Autowired
-	private AutoresRepository autorRepository;
-
-
+	private ComentariosRepository comentariosRepository;
+	
 	@GetMapping(produces = "application/json")
-	public @ResponseBody List<Autores> findAll(){
-
-		List<Autores> autores = autorRepository.findAll();
-
-		return autores;
+	public @ResponseBody List<Comentarios> findAll(){
+		
+		List<Comentarios> comentarios = comentariosRepository.findAll();
+		return comentarios;
 	}
 
 }

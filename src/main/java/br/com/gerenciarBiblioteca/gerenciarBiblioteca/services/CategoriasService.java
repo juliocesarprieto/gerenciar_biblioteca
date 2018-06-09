@@ -8,23 +8,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.gerenciarBiblioteca.gerenciarBiblioteca.models.Autores;
-import br.com.gerenciarBiblioteca.gerenciarBiblioteca.repositories.AutoresRepository;
+import br.com.gerenciarBiblioteca.gerenciarBiblioteca.models.Categorias;
+import br.com.gerenciarBiblioteca.gerenciarBiblioteca.repositories.CategoriasRepository;
 
 @RestController
-@RequestMapping("/api/autores")
-public class AutoresService {
-
+@RequestMapping("/api/categorias")
+public class CategoriasService {
+	
 	@Autowired
-	private AutoresRepository autorRepository;
-
-
+	private CategoriasRepository categoriasRepository;
+	
 	@GetMapping(produces = "application/json")
-	public @ResponseBody List<Autores> findAll(){
-
-		List<Autores> autores = autorRepository.findAll();
-
-		return autores;
+	public @ResponseBody List<Categorias> findAll(){
+		
+		List<Categorias> categorias = categoriasRepository.findAll();		
+		return categorias;
 	}
 
 }
