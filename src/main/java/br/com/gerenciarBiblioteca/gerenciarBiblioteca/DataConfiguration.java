@@ -1,4 +1,4 @@
-package br.com.gerenciarBiblioteca.gerenciarBiblioteca.config;
+package br.com.gerenciarBiblioteca.gerenciarBiblioteca;
 
 import javax.sql.DataSource;
 
